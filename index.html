@@ -1,0 +1,737 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Himanshi Rajput Portfolio</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+html,body{background:#CFCDD0}
+body{margin:0;cursor:url(images/cursor.png) 0 0,auto}
+button,a{cursor:url(images/hand.png) 8 0,pointer;font-family:inherit}
+a{color:inherit;text-decoration:none}
+button:focus-visible,a:focus-visible{outline:3px solid #1D1FCB;outline-offset:2px}
+.px{font-family:'Press Start 2P',monospace}
+.vt{font-family:VT323,monospace}
+.win{background:#FBF9F2;border:2px solid #000;border-radius:16px;box-shadow:6px 6px 0 #000;overflow:hidden;width:100%;box-sizing:border-box}
+.tb{display:flex;align-items:center;gap:12px;padding:8px 14px;color:#fff;border-bottom:2px solid #000}
+.dots{display:flex;gap:7px;align-items:center}
+.dot{width:16px;height:16px;border-radius:50%;border:2px solid #000;background:#FBF9F2;padding:0;box-sizing:border-box;display:block}
+.dot.on{background:#1D1FCB;box-shadow:0 0 0 2px #fff}
+.tbt{flex:1;font-family:'VT323',monospace;font-size:22px;letter-spacing:.04em;overflow:hidden;white-space:nowrap;text-overflow:ellipsis}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:0 18px;background:#D8D8DA;color:#000;border:2px solid #000;border-radius:6px;box-shadow:inset -2px -2px 0 #8E8E92,inset 2px 2px 0 #fff;font-family:VT323,monospace;font-size:22px;letter-spacing:.04em;white-space:nowrap}
+.btn:hover{background:#fff}
+.btn:active{box-shadow:inset 2px 2px 0 #8E8E92;transform:translate(1px,1px)}
+.btn.pri{background:#1D1FCB;color:#fff;box-shadow:inset -2px -2px 0 #0B0D7A,inset 2px 2px 0 #6A6CF0}
+.btn.pri:hover{background:#2E31E6}
+.btn.sel{background:#000;color:#fff}
+.chip{display:inline-flex;align-items:center;min-height:34px;padding:0 12px;border:2px solid #000;border-radius:999px;background:#fff;font-family:VT323,monospace;font-size:20px}
+.chip:hover{background:#1D1FCB;color:#fff}
+.tile{display:flex;flex-direction:column;gap:10px;align-items:center;text-align:center;padding:14px 10px;border:2px solid transparent;border-radius:10px;background:transparent;color:#000;min-height:44px}
+.tile:hover{background:#fff;border-color:#000;transform:translateY(-3px)}
+.span2{grid-column:span 2}
+@media (max-width:700px){.span2{grid-column:auto}}
+.shot{display:block;width:100%;padding:0;border:2px solid #000;border-radius:8px;background:#fff;overflow:hidden}
+.shot img{display:block;width:100%;height:auto}
+.shot:hover{box-shadow:4px 4px 0 #1D1FCB}
+.rs{border:2px solid #000;border-radius:10px;background:#fff;padding:18px 20px;display:flex;flex-direction:column;gap:10px}
+.rh{margin:0;font-family:'Press Start 2P',monospace;font-size:12px;font-weight:400;line-height:1.6;color:#1D1FCB}
+.rrow{display:flex;flex-direction:column;gap:2px;padding-top:10px;border-top:2px dashed #BDBDC2}
+.rrow:first-of-type{border-top:0;padding-top:0}
+.blk{height:26px;flex:1;border:2px solid #000;box-sizing:border-box}
+@keyframes blink{50%{opacity:0}}
+.blink{animation:blink 1s steps(1) infinite}
+@keyframes pop{from{transform:scale(.92);opacity:0}to{transform:scale(1);opacity:1}}
+.pop{animation:pop .18s steps(4)}
+@media print{.noprint{display:none !important}}
+</style>
+</helmet>
+
+<div style="min-height:900px;background:#CFCDD0 linear-gradient(180deg,#D6D4D7 0%,#CBC9CD 100%);font-family:Inter,system-ui,sans-serif;color:#111;font-size:16px;line-height:1.55;position:relative">
+
+<!-- ============ START ============ -->
+<sc-if value="{{isStart}}" hint-placeholder-val="{{ true }}">
+<div style="max-width:1040px;margin:0 auto;padding:40px 20px 60px;display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;justify-content:flex-end">
+<button class="btn" onClick="{{toggleSound}}" aria-pressed="{{soundOn}}">SOUND: {{soundLabel}}</button>
+</div>
+<div class="win">
+<div class="tb" style="background:#1D1FCB">
+<div class="dots"><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div>
+<span class="tbt">PORTFOLIO.EXE</span>
+<svg width="22" height="26" viewBox="0 0 11 13" shape-rendering="crispEdges" aria-hidden="true"><rect x="1" y="0" width="9" height="1" fill="#fff"/><rect x="1" y="12" width="9" height="1" fill="#fff"/><rect x="2" y="1" width="7" height="2" fill="#fff"/><rect x="3" y="3" width="5" height="1" fill="#fff"/><rect x="4" y="4" width="3" height="2" fill="#fff"/><rect x="3" y="7" width="5" height="1" fill="#9FA1FF"/><rect x="2" y="8" width="7" height="4" fill="#9FA1FF"/></svg>
+</div>
+<div style="padding:clamp(24px,4vw,48px);display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:40px;align-items:center">
+<div style="display:flex;flex-direction:column;gap:22px">
+<span class="vt" style="font-size:24px;letter-spacing:.06em;color:#1D1FCB">FASHION DESIGN | KNITWEAR DESIGN | PRODUCT DEVELOPMENT</span>
+<h1 class="px" style="margin:0;font-size:clamp(26px,4.4vw,48px);line-height:1.3;font-weight:400">HIMANSHI RAJPUT</h1>
+<p style="margin:0;font-size:18px;max-width:480px">Exploring fashion through creative research, visual storytelling and product development.</p>
+<div style="display:flex;flex-wrap:wrap;gap:12px">
+<button class="btn pri" onClick="{{enter}}" style="font-size:26px;min-height:52px">ENTER PORTFOLIO <span class="blink">_</span></button>
+<button class="btn" onClick="{{jumpProjects}}">PROJECTS</button>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{navItems}}" as="n" hint-placeholder-count="5">
+<button class="chip" onClick="{{ n.go }}">{{n.label}}</button>
+</sc-for>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:12px">
+<span class="vt" style="font-size:22px">RECENT FILES</span>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));gap:12px">
+<sc-for list="{{recent}}" as="r" hint-placeholder-count="3">
+<button onClick="{{ r.open }}" style="padding:0;border:2px solid #000;border-radius:10px;background:#fff;overflow:hidden;text-align:left;display:flex;flex-direction:column">
+<div style="height:150px;overflow:hidden;border-bottom:2px solid #000"><img onError="{{imgErr}}" src="{{r.src}}" alt="{{r.title}}" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<span class="vt" style="font-size:20px;padding:6px 10px;line-height:1.1">{{r.title}}</span>
+</button>
+</sc-for>
+</div>
+</div>
+</div>
+</div>
+</div>
+</sc-if>
+
+<!-- ============ BOOT ============ -->
+<sc-if value="{{isBoot}}" hint-placeholder-val="{{ false }}">
+<div style="max-width:640px;margin:0 auto;padding:12vh 20px;box-sizing:border-box">
+<div class="win">
+<div class="tb" style="background:#1D1FCB"><div class="dots"><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div><span class="tbt">LOADING...</span></div>
+<div style="padding:32px;display:flex;flex-direction:column;gap:20px">
+<span class="px" style="font-size:14px;line-height:1.6">LOADING PORTFOLIO</span>
+<div style="display:flex;gap:4px" role="progressbar" aria-valuenow="{{prog}}" aria-valuemin="0" aria-valuemax="100" aria-label="Loading">
+<sc-for list="{{blocks}}" as="b" hint-placeholder-count="20">
+<div class="blk" style="background:{{b.bg}}"></div>
+</sc-for>
+</div>
+<span class="vt" style="font-size:24px">{{bootMsg}} {{prog}}%</span>
+</div>
+</div>
+</div>
+</sc-if>
+
+<!-- ============ OS ============ -->
+<sc-if value="{{isOS}}" hint-placeholder-val="{{ false }}">
+<div style="min-height:900px;display:flex;flex-direction:column">
+<header style="background:#FBF9F2;border-bottom:2px solid #000;padding:8px 16px;display:flex;flex-wrap:wrap;gap:8px 16px;align-items:center;justify-content:space-between">
+<button class="btn pri" onClick="{{goDesktop}}" style="min-height:40px">HR_OS</button>
+<nav aria-label="Sections" style="display:flex;flex-wrap:wrap;gap:6px">
+<sc-for list="{{navItems}}" as="n" hint-placeholder-count="5">
+<button class="chip" onClick="{{ n.go }}" style="background:{{n.bg}};color:{{n.fg}}">{{n.label}}</button>
+</sc-for>
+</nav>
+<div style="display:flex;gap:8px;flex-wrap:wrap">
+<button class="btn" onClick="{{toggleSound}}" aria-pressed="{{soundOn}}" style="min-height:40px">SOUND: {{soundLabel}}</button>
+<button class="btn" onClick="{{exitOS}}" style="min-height:40px">EXIT</button>
+</div>
+</header>
+
+<main style="flex:1;padding:28px 20px 48px;max-width:1240px;width:100%;margin:0 auto;box-sizing:border-box;display:flex;flex-direction:column;gap:24px">
+
+<!-- DESKTOP -->
+<sc-if value="{{isDesktop}}" hint-placeholder-val="{{ true }}">
+<div style="display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:6px">
+<h2 class="px" style="margin:0;font-size:clamp(16px,2.4vw,24px);font-weight:400;line-height:1.5">DESKTOP</h2>
+<span class="vt" style="font-size:24px">Open a folder to explore the work.</span>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));gap:12px;max-width:960px">
+<sc-for list="{{desktopIcons}}" as="d" hint-placeholder-count="6">
+<button class="tile" onClick="{{ d.go }}">
+<svg width="72" height="58" viewBox="0 0 16 13" shape-rendering="crispEdges" aria-hidden="true"><rect x="0" y="1" width="6" height="2" fill="#000"/><rect x="0" y="3" width="16" height="10" fill="#000"/><rect x="1" y="4" width="14" height="8" fill="{{d.color}}"/><rect x="1" y="4" width="14" height="2" fill="#fff" opacity=".4"/></svg>
+<span class="vt" style="font-size:24px;line-height:1">{{d.label}}</span>
+</button>
+</sc-for>
+</div>
+<div class="win" style="max-width:960px">
+<div class="tb" style="background:#1D1FCB"><div class="dots"><span class="dot on"></span><span class="dot"></span><span class="dot"></span></div><span class="tbt">FEATURED: THE RARE ONES GRADUATION PROJECT</span></div>
+<div style="padding:20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:16px">
+<sc-for list="{{featured}}" as="f" hint-placeholder-count="2">
+<button onClick="{{ f.open }}" style="padding:0;border:2px solid #000;border-radius:10px;overflow:hidden;background:#fff;text-align:left;display:flex;flex-direction:column">
+<div style="height:260px;overflow:hidden;border-bottom:2px solid #000"><img onError="{{imgErr}}" src="{{f.src}}" alt="{{f.title}}" style="width:100%;height:100%;object-fit:cover;object-position:top;display:block"></div>
+<div style="padding:12px 14px;display:flex;flex-direction:column;gap:2px"><span class="vt" style="font-size:20px;color:#444">{{f.kind}}</span><span class="px" style="font-size:13px;line-height:1.5">{{f.title}}</span></div>
+</button>
+</sc-for>
+</div>
+</div>
+</div>
+</sc-if>
+
+<!-- WINDOW FRAME -->
+<sc-if value="{{hasWin}}" hint-placeholder-val="{{ false }}">
+<div class="win">
+<div class="tb" style="background:{{frame.bar}}">
+<div class="dots"><button class="dot on" onClick="{{closeWin}}" aria-label="Close window"></button><span class="dot"></span><span class="dot"></span></div>
+<span class="tbt">{{frame.title}}</span>
+<button class="btn" onClick="{{closeWin}}" style="min-height:32px;font-size:20px;padding:0 12px">{{frame.closeLabel}}</button>
+</div>
+<div style="background:{{frame.bg}};padding:clamp(16px,3vw,36px)">
+
+<!-- ABOUT -->
+<sc-if value="{{showAbout}}" hint-placeholder-val="{{ false }}">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:36px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:16px;align-items:flex-start">
+<div style="width:min(280px,100%);aspect-ratio:1;border:3px solid #000;border-radius:50%;overflow:hidden;box-shadow:6px 6px 0 #1D1FCB"><img onError="{{imgErr}}" src="images/photo.jpg" alt="Portrait of Himanshi Rajput" style="width:100%;height:100%;object-fit:cover;display:block"></div>
+<span class="px" style="font-size:16px;line-height:1.6">HIMANSHI RAJPUT</span>
+<span class="vt" style="font-size:24px;color:#1D1FCB">Fashion &amp; knitwear designer</span>
+</div>
+<div style="display:flex;flex-direction:column;gap:24px">
+<p style="margin:0;font-size:18px">I am a knitwear designer who works across the whole product story: research, concept, print and graphic development, technical drawings, tech packs and sampling. My graduation collections for Rare Ones and my internship work at Lifestyle took ideas from first mood board through to finished garments.</p>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(240px,100%),1fr));gap:20px">
+<div style="border:2px solid #000;border-radius:10px;padding:16px;background:#fff"><span class="vt" style="font-size:22px;color:#1D1FCB">EDUCATION</span><p style="margin:6px 0 0"><strong>B.Des Knitwear Design</strong><br>NIFT Kolkata<br>Batch of 2026 (2022 to 2026)<br>CGPA 8.5</p></div>
+<div style="border:2px solid #000;border-radius:10px;padding:16px;background:#fff"><span class="vt" style="font-size:22px;color:#1D1FCB">INTERESTS</span><p style="margin:6px 0 0">Fashion design<br>Knitwear design<br>Product development<br>Fashion merchandising<br>Buying and category management<br>Collection development</p></div>
+</div>
+<div style="border:2px solid #000;border-radius:10px;padding:16px;background:#fff"><span class="vt" style="font-size:22px;color:#1D1FCB">SOFTWARE</span>
+<div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:8px">
+<sc-for list="{{softwareChips}}" as="s" hint-placeholder-count="7"><span class="chip" style="font-size:19px">{{s}}</span></sc-for>
+</div></div>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<button class="btn pri" onClick="{{goProjects}}">OPEN PROJECTS</button>
+<button class="btn" onClick="{{goContact}}">CONTACT</button>
+</div>
+</div>
+</div>
+</sc-if>
+
+<!-- PROJECTS EXPLORER -->
+<sc-if value="{{showExplorer}}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:20px">
+<div style="border:2px solid #000;border-radius:6px;background:#fff;padding:6px 12px"><span class="vt" style="font-size:22px">C:\PORTFOLIO\PROJECTS</span></div>
+<span class="vt" style="font-size:22px;color:#444">8 folders. Click a folder to open its case study.</span>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(200px,100%),1fr));gap:16px">
+<sc-for list="{{folders}}" as="f" hint-placeholder-count="8">
+<button class="tile" onClick="{{ f.open }}" style="background:#fff;border-color:#000;align-items:stretch;text-align:left;padding:10px;border-radius:12px;box-shadow:4px 4px 0 {{f.acc}}">
+<div style="aspect-ratio:4/3;overflow:hidden;border:2px solid #000;border-radius:8px;background:{{f.bg}}"><img onError="{{imgErr}}" src="{{f.cover}}" alt="{{f.title}} cover" style="width:100%;height:100%;object-fit:cover;object-position:{{f.coverPos}};display:block"></div>
+<span class="vt" style="font-size:20px;color:#444;line-height:1">PROJECT {{f.num}} | {{f.brand}}</span>
+<span class="px" style="font-size:12px;line-height:1.6">{{f.title}}</span>
+<span style="font-size:14px;color:#333">{{f.kind}}</span>
+</button>
+</sc-for>
+</div>
+</div>
+</sc-if>
+
+<!-- CASE STUDY -->
+<sc-if value="{{showCase}}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:32px">
+<div style="border:2px solid #000;border-radius:12px;overflow:hidden;background:{{p.bg}};box-shadow:6px 6px 0 {{p.acc}};display:flex;justify-content:center"><img onError="{{imgErr}}" src="{{p.heroUrl}}" alt="{{p.title}}" style="display:block;width:100%;max-height:min(580px,72vw);object-fit:contain"></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(320px,100%),1fr));gap:28px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:14px">
+<span class="vt" style="font-size:24px;color:{{p.acc}}">PROJECT {{p.num}} | {{p.kind}}</span>
+<h2 class="px" style="margin:0;font-size:clamp(20px,3.2vw,36px);line-height:1.35;font-weight:400">{{p.title}}</h2>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{p.meta}}" as="m" hint-placeholder-count="3"><span class="chip" style="background:{{p.acc}};color:#fff">{{m}}</span></sc-for>
+</div>
+</div>
+<div style="display:flex;flex-direction:column;gap:14px">
+<p style="margin:0;font-size:17px">{{p.summary}}</p>
+<sc-if value="{{p.outcome}}" hint-placeholder-val="{{ false }}">
+<div style="border:2px solid #000;border-radius:10px;background:#fff;padding:14px 16px;display:flex;gap:12px;align-items:center;box-shadow:4px 4px 0 {{p.acc}}">
+<span class="px" style="font-size:12px;line-height:1.6;color:{{p.acc}}">{{p.outcomeLabel}}</span>
+<span style="font-size:16px;font-weight:600">{{p.outcome}}</span>
+</div>
+</sc-if>
+</div>
+</div>
+
+<nav aria-label="Case study sections" style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{secs}}" as="s" hint-placeholder-count="5"><a class="chip" href="#{{s.id}}">{{s.num}} {{s.name}}</a></sc-for>
+</nav>
+
+<sc-if value="{{p.notice}}" hint-placeholder-val="{{ false }}">
+<div style="border:2px solid #000;border-radius:10px;background:#fff;box-shadow:4px 4px 0 #000;overflow:hidden;max-width:640px">
+<div class="tb" style="background:#1D1FCB;padding:4px 12px"><span class="tbt" style="font-size:20px">NOTICE</span></div>
+<p style="margin:0;padding:16px">{{p.notice}}</p>
+</div>
+</sc-if>
+
+<sc-for list="{{secs}}" as="s" hint-placeholder-count="4">
+<section id="{{s.id}}" style="display:flex;flex-direction:column;gap:16px;scroll-margin-top:16px">
+<div style="display:flex;align-items:center;gap:12px;border-bottom:3px solid #000;padding-bottom:8px">
+<span class="px" style="font-size:12px;color:{{p.acc}}">{{s.num}}</span>
+<h3 class="px" style="margin:0;font-size:clamp(12px,1.6vw,16px);line-height:1.5;font-weight:400">{{s.name}}</h3>
+</div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr));gap:16px;align-items:start">
+<sc-for list="{{s.imgs}}" as="im" hint-placeholder-count="2">
+<figure class="{{im.cls}}" style="margin:0;display:flex;flex-direction:column;gap:6px">
+<button class="shot" onClick="{{ im.open }}" aria-label="Enlarge: {{im.cap}}"><img src="{{im.src}}" alt="{{im.cap}}" onError="{{imgErr}}" width="{{im.w}}" height="{{im.h}}"></button>
+<figcaption class="vt" style="font-size:20px;color:#333;line-height:1.1">{{im.cap}}</figcaption>
+</figure>
+</sc-for>
+</div>
+</section>
+</sc-for>
+
+<div style="display:flex;flex-wrap:wrap;gap:10px;border-top:3px solid #000;padding-top:20px">
+<button class="btn pri" onClick="{{closeWin}}">BACK TO PROJECTS</button>
+<button class="btn" onClick="{{nextProj}}">NEXT PROJECT</button>
+<button class="btn" onClick="{{goDesktop}}">DESKTOP</button>
+</div>
+</div>
+</sc-if>
+
+<!-- EXPERIENCE -->
+<sc-if value="{{showExp}}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:28px">
+<div style="display:flex;flex-direction:column;gap:6px"><span class="vt" style="font-size:24px;color:#1D1FCB">CAREER_TIMELINE.EXE</span><span style="max-width:620px">Two design and product development internships, both in Bengaluru. Select a node on the timeline.</span></div>
+<div style="display:flex;flex-direction:column;gap:12px" role="group" aria-label="Timeline">
+<div style="position:relative;height:6px;background:#000;border-radius:3px;margin:20px 12px 6px"></div>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:12px">
+<sc-for list="{{expTabs}}" as="e" hint-placeholder-count="2">
+<button class="btn" onClick="{{ e.pick }}" aria-pressed="{{ e.on }}" style="justify-content:flex-start;flex-direction:column;align-items:flex-start;padding:12px 16px;white-space:normal;background:{{e.bg}};color:{{e.fg}}"><span>{{e.when}}</span><span style="font-size:20px">{{e.company}}</span></button>
+</sc-for>
+</div>
+</div>
+<div style="border:2px solid #000;border-radius:12px;background:#fff;padding:clamp(16px,3vw,32px);display:flex;flex-direction:column;gap:18px;box-shadow:6px 6px 0 #1D1FCB">
+<span class="vt" style="font-size:24px;color:#1D1FCB">{{exp.when}} | {{exp.place}}</span>
+<h3 class="px" style="margin:0;font-size:clamp(14px,2vw,20px);line-height:1.5;font-weight:400">{{exp.company}}</h3>
+<span style="font-weight:600">{{exp.role}}</span>
+<p style="margin:0;max-width:720px">{{exp.blurb}}</p>
+<div style="display:flex;flex-wrap:wrap;gap:8px">
+<sc-for list="{{exp.tags}}" as="t" hint-placeholder-count="8"><span class="chip">{{t}}</span></sc-for>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<sc-for list="{{exp.links}}" as="l" hint-placeholder-count="2"><button class="btn pri" onClick="{{ l.open }}">OPEN: {{l.label}}</button></sc-for>
+</div>
+</div>
+</div>
+</sc-if>
+
+<!-- SKILLS -->
+<sc-if value="{{showSkills}}" hint-placeholder-val="{{ false }}">
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:24px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:10px">
+<span class="vt" style="font-size:24px;color:#1D1FCB">SETTINGS &gt; SKILLS</span>
+<sc-for list="{{skillTabs}}" as="t" hint-placeholder-count="3">
+<button class="btn" onClick="{{ t.pick }}" aria-pressed="{{ t.on }}" style="justify-content:flex-start;background:{{t.bg}};color:{{t.fg}}">{{t.label}}</button>
+</sc-for>
+</div>
+<div style="grid-column:span 1;border:2px solid #000;border-radius:10px;background:#fff;padding:20px;display:flex;flex-direction:column;gap:14px;min-width:0">
+<span class="px" style="font-size:13px;line-height:1.6">{{skillTitle}}</span>
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(230px,100%),1fr));gap:10px">
+<sc-for list="{{skillItems}}" as="k" hint-placeholder-count="8">
+<div style="display:flex;align-items:center;gap:10px;min-height:36px"><span aria-hidden="true" style="width:20px;height:20px;border:2px solid #000;background:#1D1FCB;color:#fff;font-size:14px;line-height:16px;text-align:center;flex:none;font-family:VT323,monospace">X</span><span>{{k}}</span></div>
+</sc-for>
+</div>
+</div>
+</div>
+</sc-if>
+
+<!-- CONTACT -->
+<sc-if value="{{showContact}}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:24px;max-width:720px">
+<span class="px" style="font-size:clamp(14px,2vw,20px);line-height:1.5">LET'S TALK</span>
+<div style="border:2px solid #000;border-radius:10px;background:#fff;padding:20px;display:grid;grid-template-columns:auto 1fr;gap:10px 20px;align-items:baseline">
+<span class="vt" style="font-size:22px;color:#1D1FCB">NAME</span><span>Himanshi Rajput</span>
+<span class="vt" style="font-size:22px;color:#1D1FCB">EMAIL</span><a href="mailto:himanshirajput.wk@gmail.com" style="text-decoration:underline;overflow-wrap:anywhere">himanshirajput.wk@gmail.com</a>
+<span class="vt" style="font-size:22px;color:#1D1FCB">PHONE</span><a href="tel:+918076546713" style="text-decoration:underline">+91 8076546713</a>
+<span class="vt" style="font-size:22px;color:#1D1FCB">LOCATION</span><span>Delhi, India</span>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<a class="btn pri" href="mailto:himanshirajput.wk@gmail.com?subject=Hello%20Himanshi">EMAIL ME</a>
+<a class="btn" href="https://linkedin.com/in/himanshirajput2" target="_blank" rel="noopener">LINKEDIN</a>
+<button class="btn" onClick="{{goResume}}">DOWNLOAD RESUME</button>
+<button class="btn" onClick="{{goDesktop}}">BACK TO DESKTOP</button>
+</div>
+</div>
+</sc-if>
+
+<!-- RESUME -->
+<sc-if value="{{showResume}}" hint-placeholder-val="{{ false }}">
+<div style="display:flex;flex-direction:column;gap:20px">
+<div style="display:flex;flex-wrap:wrap;gap:8px" role="group" aria-label="Resume version">
+<sc-for list="{{resTabs}}" as="t" hint-placeholder-count="2">
+<button class="btn" onClick="{{ t.pick }}" aria-pressed="{{ t.on }}" style="background:{{t.bg}};color:{{t.fg}}">{{t.label}}</button>
+</sc-for>
+</div>
+
+<div class="rs" style="gap:14px;box-shadow:6px 6px 0 #1D1FCB">
+<div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:space-between;align-items:flex-start">
+<div style="display:flex;flex-direction:column;gap:6px">
+<h2 class="px" style="margin:0;font-size:clamp(18px,3vw,30px);line-height:1.4;font-weight:400">HIMANSHI RAJPUT</h2>
+<span class="vt" style="font-size:24px;color:#1D1FCB">{{res.headline}}</span>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<a class="btn pri" href="{{res.pdf}}" download="{{res.file}}">DOWNLOAD PDF</a>
+<a class="btn" href="{{res.pdf}}" target="_blank" rel="noopener">VIEW FULL RESUME</a>
+</div>
+</div>
+<div style="display:flex;flex-wrap:wrap;gap:6px 20px;font-size:15px">
+<a href="tel:+918076546713" style="text-decoration:underline">+91 8076546713</a>
+<a href="mailto:himanshirajput.wk@gmail.com" style="text-decoration:underline">himanshirajput.wk@gmail.com</a>
+<a href="https://linkedin.com/in/himanshirajput2" target="_blank" rel="noopener" style="text-decoration:underline">LinkedIn</a>
+<span>{{res.location}}</span>
+</div>
+<p style="margin:0;font-size:16px;max-width:900px">{{res.summary}}</p>
+</div>
+
+<div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(340px,100%),1fr));gap:20px;align-items:start">
+<div class="rs">
+<h3 class="rh">EXPERIENCE</h3>
+<sc-for list="{{res.exp}}" as="e" hint-placeholder-count="3">
+<div class="rrow">
+<span style="font-weight:600;font-size:17px">{{e.role}}</span>
+<span class="vt" style="font-size:21px;color:#1D1FCB">{{e.company}} | {{e.when}}</span>
+<ul style="margin:6px 0 0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:15px">
+<sc-for list="{{e.bullets}}" as="b" hint-placeholder-count="3"><li>{{b}}</li></sc-for>
+</ul>
+</div>
+</sc-for>
+</div>
+<div style="display:flex;flex-direction:column;gap:20px">
+<div class="rs">
+<h3 class="rh">EDUCATION</h3>
+<div class="rrow"><span style="font-weight:600;font-size:17px">{{res.edu.degree}}</span><span class="vt" style="font-size:21px;color:#1D1FCB">{{res.edu.school}} | {{res.edu.years}}</span><span style="font-size:15px">{{res.edu.detail}}</span></div>
+</div>
+<div class="rs">
+<h3 class="rh">KEY ACHIEVEMENTS</h3>
+<ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:15px">
+<sc-for list="{{res.achievements}}" as="a" hint-placeholder-count="3"><li>{{a}}</li></sc-for>
+</ul>
+</div>
+<div class="rs">
+<h3 class="rh">SKILLS</h3>
+<sc-for list="{{res.skills}}" as="g" hint-placeholder-count="3">
+<div class="rrow">
+<span class="vt" style="font-size:21px">{{g.name}}</span>
+<div style="display:flex;flex-wrap:wrap;gap:6px"><sc-for list="{{g.items}}" as="it" hint-placeholder-count="6"><span class="chip" style="min-height:28px;font-size:17px;padding:0 10px">{{it}}</span></sc-for></div>
+</div>
+</sc-for>
+</div>
+</div>
+</div>
+
+<div class="rs">
+<h3 class="rh">ADDITIONAL EXPERIENCE</h3>
+<ul style="margin:0;padding-left:20px;display:flex;flex-direction:column;gap:6px;font-size:15px">
+<sc-for list="{{res.additional}}" as="a" hint-placeholder-count="4"><li>{{a}}</li></sc-for>
+</ul>
+</div>
+
+<div style="display:flex;flex-wrap:wrap;gap:10px">
+<a class="btn pri" href="{{res.pdf}}" download="{{res.file}}">DOWNLOAD PDF</a>
+<button class="btn" onClick="{{goContact}}">CONTACT</button>
+<button class="btn" onClick="{{goDesktop}}">BACK TO DESKTOP</button>
+</div>
+</div>
+</sc-if>
+
+</div>
+</div>
+</sc-if>
+</main>
+
+<footer style="border-top:2px solid #000;background:#FBF9F2;padding:10px 16px;display:flex;flex-wrap:wrap;gap:8px 16px;justify-content:space-between;align-items:center">
+<span class="vt" style="font-size:20px">HIMANSHI RAJPUT | NIFT KOLKATA 2026</span>
+<button class="btn" onClick="{{goDesktop}}" style="min-height:36px">BACK TO DESKTOP</button>
+</footer>
+</div>
+</sc-if>
+
+<!-- POPUP -->
+<sc-if value="{{hasPopup}}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed;right:20px;bottom:20px;z-index:50;width:min(360px,calc(100vw - 40px))">
+<div class="win">
+<div class="tb" style="background:#1D1FCB;padding:6px 12px"><span class="tbt" style="font-size:20px">{{popup.title}}</span></div>
+<div style="padding:16px;display:flex;flex-direction:column;gap:12px"><p style="margin:0">{{popup.text}}</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="btn pri" onClick="{{closePopup}}">OK</button></div></div>
+</div>
+</div>
+</sc-if>
+
+<!-- LIGHTBOX -->
+<sc-if value="{{hasLb}}" hint-placeholder-val="{{ false }}">
+<div style="position:fixed;inset:0;z-index:100;background:rgba(10,10,40,.88);display:flex;flex-direction:column;gap:12px;padding:16px;box-sizing:border-box">
+<div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;justify-content:space-between">
+<span class="vt" style="font-size:22px;color:#fff;flex:1;min-width:200px">{{lb.cap}} ({{lb.pos}})</span>
+<div style="display:flex;gap:8px"><button class="btn" onClick="{{lbPrev}}">PREV</button><button class="btn" onClick="{{lbNext}}">NEXT</button><button class="btn pri" onClick="{{lbClose}}">CLOSE</button></div>
+</div>
+<div style="flex:1;min-height:0;display:flex;align-items:center;justify-content:center"><img onError="{{imgErr}}" src="{{lb.src}}" alt="{{lb.cap}}" style="max-width:100%;max-height:calc(100vh - 110px);border:3px solid #000;border-radius:8px;background:#fff;object-fit:contain"></div>
+</div>
+</sc-if>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1800}}'>
+class Component extends DCLogic {
+  componentWillUnmount() { if (this._t) clearInterval(this._t); }
+
+  beep(f) {
+    if (!this.state.sound) return;
+    try {
+      const C = window.AudioContext || window.webkitAudioContext;
+      this._ac = this._ac || new C();
+      const o = this._ac.createOscillator(), g = this._ac.createGain();
+      o.type = 'square'; o.frequency.value = f || 520; g.gain.value = 0.04;
+      o.connect(g); g.connect(this._ac.destination);
+      o.start(); o.stop(this._ac.currentTime + 0.07);
+    } catch (e) {}
+  }
+
+  renderVals() {
+    const S = this.state;
+    const screen = S.screen || 'start';
+    const win = S.win || null;
+    const pid = S.proj || null;
+    const prog = S.prog || 0;
+    const U = (k) => 'images/' + k + (k==='pdfd'||k==='pdfm' ? '.pdf' : '.jpg');
+
+    const COBALT = '#1D1FCB';
+    const P0 = [
+      { id:'western', num:'01', title:'Western Shadows', short:'WOMENSWEAR PRINT', kind:'Womenswear print design', bar:COBALT, bg:'#F1EFEA', acc:COBALT, folder:'#6B6B72', hero:'a25', heroPos:'center',
+        meta:['Print design','Womenswear','Repeat patterns'],
+        summary:'A womenswear print story that blends Western influences with the dark, ornamental #GothLite look. Gothic literature, dark forests and chiaroscuro become black and ivory paisley, lace and geometric motifs, built into repeat patterns and applied to a five-look range for women aged 25 to 45.',
+        secs:[
+          { name:'Inspiration and research', imgs:[['a21','Trend research: Western Gothic',2],['a24','Enshadowed: chiaroscuro moodboard',1]] },
+          { name:'Concept', imgs:[['a23','Concept: gothic literature and dark forests',2]] },
+          { name:'Moodboard', imgs:[['a25','Western Shadows moodboard',2]] },
+          { name:'Print development and repeat patterns', imgs:[['a26','Motifs and repeat patterns in black and ivory',2]] },
+          { name:'Final applications', imgs:[['a27','Five looks with the final prints',2]] } ] },
+      { id:'menswear', num:'02', title:'Twilight Trip and Fragile Lands', short:'MENSWEAR PRINT', kind:'Menswear print design', bar:COBALT, bg:'#F1EFEA', acc:COBALT, folder:'#2F8F6B', hero:'a12', heroPos:'center',
+        meta:['Print design','Menswear','Colour exploration'],
+        summary:'Two menswear print directions. Twilight Trip is a neon, rave-era story told through puff print, glow-in-the-dark ink and distorted digital graphics. Fragile Lands, built on Elemental Textures, turns bark, stone, water and cracked earth into prints for men aged 30 and over.',
+        secs:[
+          { name:'Twilight Trip: inspiration and concept', imgs:[['a12','Twilight Trip moodboard: Neural Voyage',2]] },
+          { name:'Twilight Trip: final applications', imgs:[['a13','T-shirt applications: puff print and glow-in-the-dark ink',2]] },
+          { name:'Fragile Lands: inspiration and client', imgs:[['a14','Trend research: earthy textures',1],['a15','Client: target audience and lifestyle',1]] },
+          { name:'Fragile Lands: concept and moodboard', imgs:[['a17','Terraforma moodboard',2]] },
+          { name:'Fragile Lands: colour exploration', imgs:[['a18','Elemental Textures: Pantone colour story',2]] },
+          { name:'Fragile Lands: print development', imgs:[['a19','Print development: bark, leaf and water textures',2]] },
+          { name:'Fragile Lands: final applications', imgs:[['a20','Final looks with the developed prints',2]] } ] },
+      { id:'intimates', num:'03', title:'Intimate Apparel Collection', short:'INTIMATE APPAREL', kind:'Academic project, intimate apparel', bar:COBALT, bg:'#F1EFEA', acc:COBALT, folder:'#E27AA8', hero:'a34', heroPos:'center',
+        meta:['Intimate apparel','Research','Design development'],
+        summary:'My intimate apparel specialisation work: customer and trend research, romantic and nostalgic moodboards, silhouette and material studies, then sketches, illustrated ranges and a final garment constructed on the stand.',
+        secs:[
+          { name:'Research', imgs:[['a29','Trend research: Digital Intricacies',2],['a30','Client: lingerie customer profile',1]] },
+          { name:'Concept and moodboards', imgs:[['a31','Soft Romance moodboard',2],['a32','Victorian era moodboard and colour palette',1],['a36','Valley of the Dolls',1],['a37','for Love and Lemons: brand reference',2]] },
+          { name:'Silhouette and materials', imgs:[['a33','Silhouette and material study',2],['a41','Materials and trims',1]] },
+          { name:'Technical drawings', imgs:[['a42','Design developments: hand sketches',2]] },
+          { name:'Design development', imgs:[['a43','Illustrated range',1],['a34','Final range of five designs',2]] },
+          { name:'Garment details and final collection', imgs:[['a35','Final garment construction, front and back',2]] } ] },
+      { id:'knit', num:'04', title:'Hand Flat Knit Collection (Application)', short:'HAND FLAT KNIT', kind:'Knitwear design', bar:COBALT, bg:'#F1EFEA', acc:COBALT, folder:'#C9A227', hero:'a45', heroPos:'center',
+        meta:['Knitwear','Hand flat knit','Colour'],
+        summary:'My knitwear specialisation project, inspired by 1960s New Mod style: checks, tweeds and sharp tailoring. The moodboard sets the palette of yarn colours, and the illustrated looks show how it becomes a knitwear range.',
+        notice:'The supplied PDFs include the moodboard and final looks only. Stitch exploration, swatches, knit structures and technical details are not in them yet. Send those pages and they will be added to this folder.',
+        secs:[
+          { name:'Inspiration and colour', imgs:[['a45','New Mod: moodboard and yarn colour palette',2]] },
+          { name:'Garment development and final applications', imgs:[['a46','Final looks, illustrated',2]] } ] },
+      { id:'roseraie', num:'05', title:"La Roseraie d'Hiver", short:'RARE ONES AW26', kind:'Rare Ones | The House of Rare | AW26 | Girlswear', bar:'#B8416F', bg:'#FAF1EC', acc:'#B8416F', folder:'#E58AA8', hero:'b19', heroPos:'center 20%', featured:true,
+        meta:['Rare Ones','AW26','Girlswear','Graduation project'],
+        summary:"My graduation project collection, inspired by rose gardens and botanical heritage. It translates floral elements into contemporary premium kidswear, with hand-drawn rose motifs developed into prints, jacquard knits and embroidery, then specified in tech packs and costed for production.",
+        secs:[
+          { name:'Trend research', imgs:[['b03','Trend research and colour strategies',2]] },
+          { name:'Concept', imgs:[['b04','Concept: the rose garden as heritage',2]] },
+          { name:'Moodboards', imgs:[['b05','Moodboard: the rose garden',1],['b06','Moodboard: softness and childlike nostalgia',1]] },
+          { name:'Colour story', imgs:[['b07','Colour palette',2]] },
+          { name:'Silhouette and range planning', imgs:[['b08','Silhouette research',2],['b09','Design developments: tops and dresses',1],['b10','Design developments: bottoms and outerwear',1]] },
+          { name:'Final selection', imgs:[['b11','Final selected designs, set 1',1],['b12','Final selected designs, set 2',1]] },
+          { name:'Print, motif and embroidery development', imgs:[['b13','Motif process 1: from rose sketch to sweatshirt',1],['b14','Motif process 2: cluster compositions and engineered print',1],['b15','Initial inspirations to applied motif',1],['b16','Motif derivation: Rose Garden collection',1],['b17','Rare Ones rose and lettering development',1],['b18','Raretastic heart motif development',1]] },
+          { name:'Technical drawings and tech packs', imgs:[['b21','Technical specification pack: flat knit jacquard',2],['b22','Measurement and grading sheet',1],['b23','Manufacturing cost analysis',1]] },
+          { name:'Final garment visuals', imgs:[['b19','Final looks: sweater and pleated skirt, cable-knit dress, embroidered sweatshirt',2],['b20','Final looks: floral co-ord, varsity jacket, heart dress',2],['b41','Heart-embroidered dress, flat lay',1],['b40','Flat lay: rose sweater and print skirt',1],['b44','Kids lookbook',2]] } ] },
+      { id:'pitlane', num:'06', title:'Pitlane Society', short:'RARE ONES AW26', kind:'Rare Ones | The House of Rare | AW26 | Boyswear', bar:'#C8281E', bg:'#F4F1E8', acc:'#1B3FA8', folder:'#D13A2B', hero:'b35', heroPos:'center 25%', featured:true,
+        meta:['Rare Ones','AW26','Boyswear','Graduation project'],
+        summary:'My second graduation collection explores 1970s Grand Prix racing and 1990s country club culture. Racing flags, vintage cars and tennis courts become retro graphics and engineered prints on polos, tees and shorts, specified through tech packs, grading and costing.',
+        secs:[
+          { name:'Forecast and research', imgs:[['b25','Forecast: mood and colour',2]] },
+          { name:'Concept', imgs:[['b27','Concept: racetracks meet country clubs',2]] },
+          { name:'Moodboards and colour', imgs:[['b26','Moodboard: courts, clubs and the grid',1],['b28','Moodboard: sport and speed illustrations',1],['b29','Colour palette and collage',2]] },
+          { name:'Retro racing graphics and prints', imgs:[['b30','Print and graphics: flags, cars and shapes',2],['b31','Racing motif process: doodles to finished graphic',2],['b32','Game On lettering process',1],['b33','Design evolution: R monogram',1],['b34','Design evolution: tennis motif',2]] },
+          { name:'Technical drawings and tech packs', imgs:[['b37','Technical specification pack: printed polo',1],['b38','Measurement and grading sheet',1],['b39','Manufacturing cost analysis',2]] },
+          { name:'Garment silhouettes and final collection', imgs:[['b35','Final looks, group 1',2],['b36','Final looks, group 2',2],['b42','Styled looks: tennis, cricket and basketball',1],['b43','Styled looks: badminton and court-side',1],['b45','Seasonal collection details',2]] } ] },
+      { id:'sunset', num:'07', title:'Sunset Bandits', short:'FORCA MENSWEAR', kind:'FORCA Menswear | Lifestyle | Landmark Group | Summer Internship 2025', bar:'#9A5B2E', bg:'#FBF3E1', acc:'#9A5B2E', folder:'#B8793F', hero:'a06', heroPos:'center', featured:false,
+        meta:['Lifestyle','Landmark Group','Internship 2025','Menswear'],
+        summary:'A collection inspired by the American Wild West, Arizona landscapes, cactus imagery, bikers and vintage western aesthetics. Hand-illustrated horses, cowboys, tigers, cacti and lettering became prints and graphics on tees for FORCA Menswear.',
+        outcome:'This collection was selected for production and is available in Lifestyle stores across India.',
+        secs:[
+          { name:'Concept and research', imgs:[['a05','Project brief and concept note',2]] },
+          { name:'Moodboard and colour direction', imgs:[['a06','Collection moodboard and colour direction',2]] },
+          { name:'Print and graphic development', imgs:[['a07','Hand-illustrated explorations: horse, tiger and FORCA lettering',2],['a08','FORCA lettering with cactus landscapes',2],['a09','Hand-drawn map graphic and placements',2],['a10','Textured cactus and desert artwork',2]] },
+          { name:'Garment development and final designs', imgs:[['a11','Dessert Miles and Rogue Riders Club graphics on tees',2]] } ] },
+      { id:'fame', num:'08', title:'FAME Forever Senior Girls', short:'FAME SENIOR GIRLS', kind:'FAME Forever | Lifestyle | Landmark Group | Summer Internship 2025', bar:'#C0527A', bg:'#FBF3F5', acc:'#B0285F', folder:'#F0A6C0', hero:'fcover', heroPos:'center',
+        meta:['Lifestyle','Landmark Group','Internship 2025','SS26 Drop 1','Senior girls'],
+        summary:'Lights, Camera, Action: a Senior Girls collection inspired by the energy of New York City, with its Broadway lights, cinematic glamour and street-style influences. The brand’s bestselling silhouettes were kept as the commercial base, then refreshed with new prints and graphics reinterpreting neon signs, Broadway motifs and cinematic elements. Flat sketches and tech packs specified every design for production.',
+        outcome:'4 to 6 FAME designs from this internship were selected for production.', outcomeLabel:'SELECTED FOR PRODUCTION',
+        secs:[
+          { name:'Project brief and concept', imgs:[['f10','Project brief and concept note: Lights, Camera, Action',2]] },
+          { name:'Inspiration and moodboard', imgs:[['f20','Lights, Camera, Action: New York moodboard',1],['f21','Illustrated New York scene and colour palette',1]] },
+          { name:'Graphics and placement prints', imgs:[['f30','Graphics: illustrated placement prints on tops',1],['f31','Graphics: night-skyline print on a black tee',1]] },
+          { name:'All-over prints and repeat patterns', imgs:[['f40','All-over print: watercolour floral, applied to a dress',1],['f41','All-over print: floral repeat, applied to a dress',1]] },
+          { name:'Flats and design development', imgs:[['f50','Flats: tops and outerwear',1],['f51','Flats: shorts, skirts and trousers',1],['f60','Flats: dresses, set 1',1],['f61','Flats: dresses and layered looks',1],['f70','Flats: dresses, set 2',1],['f71','Flats: dresses, set 3',1]] },
+          { name:'Tech packs', imgs:[['f80','Tech packs: print placement and specifications',1],['f81','Tech packs: construction details and trims',1]] },
+          { name:'Final range', imgs:[['f90','Line sheet: SS26 Drop 1, Senior Girls',1],['f91','Line sheet: dresses and extra options',1]] } ] }
+    ];
+    const ORDER = ['roseraie', 'pitlane', 'sunset', 'fame', 'intimates', 'western', 'menswear', 'knit'];
+    const BRAND = { roseraie: 'RARE ONES', pitlane: 'RARE ONES', sunset: 'LIFESTYLE', fame: 'LIFESTYLE', intimates: 'NIFT KOLKATA', western: 'NIFT KOLKATA', menswear: 'NIFT KOLKATA', knit: 'NIFT KOLKATA' };
+    const TITLE = { sunset: 'FORCA Menswear: Sunset Bandits', fame: 'FAME Forever Senior Girls: Lights, Camera, Action' };
+    const COVER = { roseraie: ['b19', 'center top'], pitlane: ['b35', 'center top'], sunset: ['a06', 'center'], fame: ['fcover', 'center'], intimates: ['a34', 'center'], western: ['a25', 'center'], menswear: ['a12', 'center'], knit: ['a45', 'center'] };
+    const P = ORDER.map((id, i) => { const q = P0.find((x) => x.id === id); return { ...q, title: TITLE[id] || q.title, num: '0' + (i + 1), brand: BRAND[id], heroUrl: U(q.hero), outcomeLabel: q.outcomeLabel || 'NOW IN STORES', cover: U(COVER[id][0]), coverPos: COVER[id][1] }; });
+    const pById = {}; P.forEach((p) => { pById[p.id] = p; });
+    const p = pById[pid] || P[0];
+
+    // case study sections with flat lightbox index
+    const flat = [];
+    const dim = (k) => (k[0] === 'a' ? [1440, 810] : k[0] === 'b' ? [900, 900] : (k === 'fcover' || k === 'f10') ? [2000, 1125] : [1000, 1125]);
+    const secs = p.secs.map((s, si) => ({
+      id: 's-' + p.id + '-' + si, num: '0' + (si + 1), name: s.name.toUpperCase(),
+      imgs: s.imgs.map((im) => { const idx = flat.length; flat.push({ src: U(im[0]), cap: im[1] });
+        return { src: U(im[0]), cap: im[1], w: dim(im[0])[0], h: dim(im[0])[1], cls: im[2] === 2 ? 'span2' : '', open: () => { this.beep(660); this.setState({ lb: idx }); } }; })
+    }));
+
+    // handlers
+    const go = (w) => () => { this.beep(520); this.setState({ screen: 'os', win: w, proj: null, popup: null }); };
+    const openProj = (id) => () => {
+      this.beep(600);
+      const popup = id === 'sunset' ? { title: 'NEW MESSAGE', text: 'Sunset Bandits was selected for production and is in Lifestyle stores across India.' } : null;
+      this.setState({ screen: 'os', win: 'projects', proj: id, popup });
+    };
+    const goDesktop = () => { this.beep(440); this.setState({ screen: 'os', win: null, proj: null }); };
+    const closeWin = () => { this.beep(400); if (S.proj) this.setState({ proj: null }); else this.setState({ win: null }); };
+    const enter = () => {
+      this.beep(700);
+      if (this._t) clearInterval(this._t);
+      this.setState({ screen: 'boot', prog: 0 });
+      this._t = setInterval(() => {
+        const n = (this.state.prog || 0) + 8;
+        if (n >= 100) { clearInterval(this._t); this.setState({ prog: 100, screen: 'os', win: null, proj: null, popup: { title: 'WELCOME', text: 'Open a folder on the desktop to explore. The Rare Ones graduation collections are in PROJECTS.' } }); }
+        else this.setState({ prog: n });
+      }, 140);
+    };
+    const nextProj = () => { const i = P.findIndex((x) => x.id === p.id); const n = P[(i + 1) % P.length]; this.beep(600); this.setState({ proj: n.id, popup: n.id === 'sunset' ? { title: 'NEW MESSAGE', text: 'Sunset Bandits was selected for production and is in Lifestyle stores across India.' } : null }); };
+
+    const navDefs = [['ABOUT', 'about'], ['PROJECTS', 'projects'], ['EXPERIENCE', 'experience'], ['SKILLS', 'skills'], ['CONTACT', 'contact'], ['RESUME', 'resume']];
+    const navItems = navDefs.map((n) => ({ label: n[0], go: go(n[1]), bg: win === n[1] ? '#1D1FCB' : '#fff', fg: win === n[1] ? '#fff' : '#111' }));
+    const desktopIcons = [['ABOUT_ME', 'about', '#7C86F5'], ['PROJECTS', 'projects', '#1D1FCB'], ['EXPERIENCE', 'experience', '#C9A227'], ['SKILLS', 'skills', '#2F8F6B'], ['CONTACT', 'contact', '#E27AA8'], ['RESUME', 'resume', '#8E8E92']].map((d) => ({ label: d[0], color: d[2], go: go(d[1]) }));
+
+    const folders = P.map((f) => ({ num: f.num, title: f.title, kind: f.kind, brand: f.brand, color: f.folder, acc: f.acc, bg: f.bg, cover: f.cover, coverPos: f.coverPos, open: openProj(f.id) }));
+
+    const recent = [['sunset', 'a06'], ['roseraie', 'b19'], ['pitlane', 'b35']].map((r) => ({ title: pById[r[0]].title, src: U(r[1]), open: openProj(r[0]) }));
+    const featured = ['roseraie', 'pitlane'].map((id) => ({ title: pById[id].title, kind: pById[id].kind, src: U(pById[id].hero), open: openProj(id) }));
+
+    // experience
+    const EXP = [
+      { id: 'rare', company: 'RARE ONES | THE HOUSE OF RARE', short: 'Rare Ones', role: 'Design & Product Development Intern', when: 'DEC 2025 - APR 2026', place: 'Bengaluru, India',
+        blurb: 'Worked on the launch of the brand\'s first girlswear category, developing two complete seasonal collections (12+ styles) from concept to sample, for a brand that previously made only boyswear.',
+        tagline: 'Two AW26 collections and the girlswear category: research, concept, CADs, tech packs, print and trim development, sampling follow-ups, fittings.',
+        tags: ['Trend research', 'Concept development', 'Moodboards', 'Colour stories', 'Range planning', 'CADs', 'Tech packs', 'Print and trim development', 'Sampling follow-ups', 'Fittings and product development'],
+        links: [["LA ROSERAIE D'HIVER", 'roseraie'], ['PITLANE SOCIETY', 'pitlane']] },
+      { id: 'life', company: 'LIFESTYLE | LANDMARK GROUP', short: 'Lifestyle', role: 'Design & Product Development Intern', when: 'JUN 2025 - AUG 2025', place: 'Bengaluru, India',
+        blurb: 'Menswear and girlswear design development for FORCA and FAME. The FORCA Sunset Bandits collection was selected for production and is in Lifestyle stores across India. 4 to 6 FAME designs were also selected for production.',
+        tagline: 'FORCA Menswear and FAME girlswear: trend research, print and graphic development, colour exploration, technical drawings, sample coordination.',
+        tags: ['Menswear and girlswear development', 'Trend research', 'Print and graphic development', 'Colour exploration', 'Technical drawings', 'Sample coordination', 'Product development'],
+        links: [['SUNSET BANDITS', 'sunset'], ['FAME GIRLSWEAR', 'fame']] }
+    ];
+    const expId = S.exp || 'rare';
+    const e0 = EXP.find((e) => e.id === expId) || EXP[0];
+    const expTabs = EXP.map((e) => ({ when: e.when, company: e.short.toUpperCase(), on: e.id === expId, bg: e.id === expId ? '#000' : '#D8D8DA', fg: e.id === expId ? '#fff' : '#000', pick: () => { this.beep(560); this.setState({ exp: e.id }); } }));
+    const exp = { ...e0, links: e0.links.map((l) => ({ label: l[0], open: openProj(l[1]) })) };
+
+    // skills
+    const SK = [
+      { id: 'sw', label: 'DESIGN SOFTWARE', items: ['Adobe Illustrator', 'Adobe Photoshop', 'Adobe InDesign', 'Procreate', 'Figma', 'CLO 3D', 'Microsoft Excel'] },
+      { id: 'fp', label: 'FASHION AND PRODUCT DEVELOPMENT', items: ['Trend Research', 'Moodboards', 'Concept Development', 'Colour Stories', 'Range Planning', 'Print Development', 'Surface Design', 'Technical Drawings', 'Tech Packs', 'Knitwear Development', 'Fabric and Trim Knowledge', 'Sampling Coordination', 'Garment Construction'] },
+      { id: 'ot', label: 'OTHER', items: ['Market Research', 'Presentation Development', 'Communication', 'Project Coordination', 'AI-assisted Creative Tools'] }
+    ];
+    const skId = S.sk || 'sw';
+    const sk = SK.find((k) => k.id === skId) || SK[0];
+    const skillTabs = SK.map((k) => ({ label: k.label, on: k.id === skId, bg: k.id === skId ? '#1D1FCB' : '#D8D8DA', fg: k.id === skId ? '#fff' : '#000', pick: () => { this.beep(560); this.setState({ sk: k.id }); } }));
+
+    // resume (content taken from the two resume PDFs)
+    const RES = {
+      design: { label: 'DESIGN RESUME', pdf: U('pdfd'), file: 'Himanshi_Rajput_Fashion_Design_Resume.pdf',
+        headline: 'Knitwear Designer | Apparel Designer | Collection Development', location: 'Delhi, India (open to relocate)',
+        summary: 'Knitwear Design graduate from NIFT Kolkata with industry experience designing commercially relevant menswear, girlswear and knitwear collections for Landmark Group and The House of Rare. Skilled in knit structures, garment construction, technical drawings, trend forecasting, Adobe Illustrator, CLO 3D and end-to-end collection development. Immediate joiner.',
+        exp: [
+          { role: 'Knitwear & Collection Designer (Graduation Project)', company: 'Rare Ones | The House of Rare, Bengaluru', when: 'Dec 2025 - Apr 2026', bullets: [
+            'Worked on the launch of the brand\'s first girlswear category, designing 2 complete seasonal collections (12+ styles) from concept to sample.',
+            'Developed moodboards, colour stories, trend boards and range plans that defined the girlswear aesthetic and direction.',
+            'Created print and graphic artwork in Adobe Illustrator and Photoshop; visualised knit textures, drape and fit pre-sampling.',
+            'Developed tech packs and design sheets with construction details, knit specifications, fabric callouts and finishing instructions.',
+            'Coordinated with sampling teams through fittings and revision rounds so samples met design intent and brand quality standards.'] },
+          { role: 'Fashion Designer (Summer Internship)', company: 'Lifestyle | Landmark Group, Bengaluru', when: 'Jun - Aug 2025', bullets: [
+            'Designed knitwear graphics, silhouettes and commercially relevant concepts for FORCA Menswear; contributed to a collection that progressed to retail production and is live in Lifestyle stores across India.',
+            'Executed trend research and concept development for menswear and girlswear; 4-6 FAME designs also selected for production.',
+            'Gained commercial exposure to how designs are filtered, approved and executed for mass retail, from sketch to production sign-off.'] },
+          { role: 'Graphic & Branding Designer', company: 'Adwera | Shop Express, Remote', when: 'Aug - Nov 2025', bullets: [
+            'Designed logos, colour palettes and brand guidelines for multiple brands under the Shop Express umbrella; produced and published social media content.'] }
+        ],
+        edu: { degree: 'B.Des Knitwear Design', school: 'NIFT Kolkata', years: '2022 - 2026', detail: 'Specialisation: Intimate Apparel | CGPA 8.5' },
+        skills: [
+          { name: 'Design and technical', items: ['Knitwear Design', 'Menswear Design', 'Kidswear Design', 'Flat Knitting', 'Circular Knitting', 'Machine Knitting', 'Knit Structures', 'Intimate Apparel', 'Garment Construction', 'Pattern Making', 'Print & Graphic Design', 'Tech Packs', 'Moodboards', 'Colour Stories', 'Trend Forecasting', 'Consumer Insights', 'Market Research', 'Range Planning', 'Technical Sketches & Flats'] },
+          { name: 'Software', items: ['Adobe Illustrator', 'Photoshop', 'InDesign', 'Shima Seiki', 'CLO 3D', 'Figma', 'Microsoft Excel', 'Adobe Firefly', 'Midjourney', 'ChatGPT'] },
+          { name: 'Fabric knowledge', items: ['Knitted Structures', 'Stretch & Recovery', 'Yarn Knowledge', 'Fabric Behaviour', 'Skin-Sensitive Materials', 'Trims & Embellishments', 'Fabric Sourcing'] }
+        ],
+        achievements: ['Worked on launching Rare Ones\' first girlswear category: 2 complete seasonal collections (12+ styles) from concept to sample.', 'FORCA menswear collection (Landmark Group) selected for retail production; live in Lifestyle stores across India.', '1st Place, Spectrum Fashion Show 2025 and 3rd Place, 2024 (NIFT Kolkata).'],
+        additional: ['Design Department Intern, Her Shein Box (2023) and Branding Intern, Cobble Design Agency (2023): digital collections, moodboards, print direction, logo and packaging creatives.', 'Core Team Member, Spectrum Fashion Show, NIFT Kolkata (2024, 2025): designed and crafted an original knitwear garment each year.', 'Stylecast Crew, Myntra (2022) and Campus Ambassador, Newme Asia (2023): styling reels, fashion content and promotional campaigns.', 'Sales & Brand Representative, Tribe India, Neha Poddar, Moh India, Dot & Three (2022-2024): 5+ retail pop-ups and exhibitions; merchandise and styling advice.'] },
+      merch: { label: 'MERCHANDISING RESUME', pdf: U('pdfm'), file: 'Himanshi_Rajput_Merchandising_Resume.pdf',
+        headline: 'Merchandising | Buying | Product Development', location: 'Open to Delhi NCR, Bengaluru, Mumbai and other metros',
+        summary: 'NIFT Kolkata Knitwear Design graduate (CGPA 8.5) with hands-on experience in product development and merchandising at Landmark Group and The House of Rare. Worked on launching a brand\'s first girlswear category and on a menswear collection now live in Lifestyle stores across India. Strong in range planning, vendor and sampling coordination, TNA tracking in Excel and trend research. Immediate joiner, open to relocation.',
+        exp: [
+          { role: 'Design & Product Development Intern (Graduation Project)', company: 'Rare Ones | The House of Rare, Bengaluru', when: 'Dec 2025 - Apr 2026', bullets: [
+            'Worked on the launch of the brand\'s first girlswear category (previously boyswear only); developed 2 complete seasonal collections (12+ styles) from concept to sample.',
+            'Coordinated sampling, fit sessions and production follow-ups with vendors and cross-functional teams; tracked milestones in an Excel TNA.',
+            'Conducted trend, market and competitor research; built moodboards, colour stories and range plans aligned to brand positioning.',
+            'Created CADs, tech packs, garment specifications and trims details for every style; handled fabric selection.'] },
+          { role: 'Design & Product Development Intern', company: 'Lifestyle | Landmark Group, Bengaluru', when: 'Jun - Aug 2025', bullets: [
+            'Worked across FORCA Menswear and FAME Girlswear private labels on product development, trend research, commercial design and assortment development.',
+            'Supported sample coordination, Pantone and colour references, tech packs, technical drawings and product specifications.',
+            'FORCA collection progressed to retail production and is live in Lifestyle stores across India; 4-6 FAME designs also selected for production.',
+            'Gained exposure to buying cycles, category management and the commercial approval process before production sign-off.'] }
+        ],
+        edu: { degree: 'B.Des Knitwear Design', school: 'NIFT Kolkata', years: '2022 - 2026', detail: 'Specialisation: Intimate Apparel | Minor: B.FTech (SAP/ERP, Excel, AI) | CGPA 8.5' },
+        skills: [
+          { name: 'Merchandising and commercial', items: ['Category Management', 'Assortment Development', 'Product Lifecycle', 'Vendor & Production Coordination', 'TNA / Critical Path', 'Consumer Insights'] },
+          { name: 'Design and product', items: ['Trend & Market Research', 'Range Planning', 'Tech Packs', 'Garment Construction', 'Fabric & Trim Knowledge (Knit & Woven)', 'Pantone & Colour References', 'Sampling & Fit'] },
+          { name: 'Software', items: ['Microsoft Excel', 'SAP/ERP (Academic)', 'Adobe Illustrator', 'Photoshop', 'InDesign', 'CLO 3D', 'Canva', 'Gen AI tools'] }
+        ],
+        achievements: ['Worked on launching Rare Ones\' first girlswear category: 2 complete collections (12+ styles) from concept to sample.', 'FORCA menswear collection (Landmark Group) selected for retail production; live in Lifestyle stores across India.', '1st Place, Spectrum Fashion Show 2025 and 3rd Place, 2024 (NIFT Kolkata).'],
+        additional: ['Event Executive (Freelance), D2C Insider, Remote (Sep 2026, one-month freelance): B2B outreach and sales for a D2C AI industry summit; 50+ daily calls, follow-ups and closures.', 'Sales & Brand Representative, Tribe India, Neha Poddar, Moh India, Dot & Three (2022-2024): 5+ retail pop-ups; managed merchandise, styling and fabric advice.', 'Core Team Member, Spectrum Fashion Show, NIFT Kolkata (2024, 2025): department won 1st place (2025) and 3rd place (2024).', 'Stylecast Crew, Myntra (May - Aug 2022) and Campus Ambassador, Newme Asia (2023): styling reels, fashion content and promotional campaigns.'] }
+    };
+    const rvId = S.rv || 'design';
+    const res = RES[rvId] || RES.design;
+    const resTabs = ['design', 'merch'].map((k) => ({ label: RES[k].label, on: k === rvId, bg: k === rvId ? '#1D1FCB' : '#D8D8DA', fg: k === rvId ? '#fff' : '#000', pick: () => { this.beep(560); this.setState({ rv: k }); } }));
+
+    // frame
+    let frame ={ title: '', bar: COBALT, bg: '#FBF9F2', closeLabel: 'CLOSE' };
+    const titles = { about: 'ABOUT_ME.EXE', projects: 'C:\\PROJECTS', experience: 'EXPERIENCE.EXE', skills: 'SETTINGS: SKILLS', contact: 'CONTACT.EXE', resume: 'RESUME.PDF' };
+    if (win) frame.title = titles[win] || win.toUpperCase();
+    if (win === 'projects' && pid) frame = { title: 'C:\\PROJECTS\\' + p.title.toUpperCase().replace(/ /g, '_'), bar: p.bar, bg: p.bg, closeLabel: '< BACK' };
+
+    const blocks = []; for (let i = 0; i < 20; i++) blocks.push({ bg: i < Math.floor(prog / 5) ? COBALT : '#fff' });
+    const bootMsg = prog < 30 ? 'Starting up...' : prog < 60 ? 'Loading collections...' : prog < 90 ? 'Unpacking mood boards...' : 'Almost there...';
+
+    const lbIdx = S.lb;
+    const hasLb = typeof lbIdx === 'number' && flat.length > 0 && lbIdx < flat.length;
+    const lbCur = hasLb ? flat[lbIdx] : { src: '', cap: '' };
+    const lb = { src: lbCur.src, cap: lbCur.cap, pos: hasLb ? (lbIdx + 1) + ' of ' + flat.length : '' };
+
+    return {
+      isStart: screen === 'start', isBoot: screen === 'boot', isOS: screen === 'os',
+      isDesktop: !win, hasWin: !!win,
+      showAbout: win === 'about', showExplorer: win === 'projects' && !pid, showCase: win === 'projects' && !!pid,
+      showExp: win === 'experience', showSkills: win === 'skills', showContact: win === 'contact', showResume: win === 'resume',
+      frame, p, secs, folders, navItems, desktopIcons, recent, featured, expTabs, exp, skillTabs, skillTitle: sk.label, skillItems: sk.items,
+      softwareChips: SK[0].items,
+      res, resTabs,
+      imgErr: (e) => { try { const el = e.target; if (el && !el.dataset.retry) { el.dataset.retry = '1'; const s = el.getAttribute('src'); el.removeAttribute('src'); setTimeout(() => el.setAttribute('src', s), 400); } } catch (err) {} },
+      prog, blocks, bootMsg,
+      soundOn: !!S.sound, soundLabel: S.sound ? 'ON' : 'OFF',
+      hasPopup: !!S.popup, popup: S.popup || { title: '', text: '' },
+      closePopup: () => { this.beep(500); this.setState({ popup: null }); },
+      hasLb, lb,
+      lbPrev: () => this.setState({ lb: (lbIdx - 1 + flat.length) % flat.length }),
+      lbNext: () => this.setState({ lb: (lbIdx + 1) % flat.length }),
+      lbClose: () => this.setState({ lb: null }),
+      toggleSound: () => { const on = !S.sound; this.setState({ sound: on }); if (on) { this.state.sound = true; this.beep(880); } },
+      enter, goDesktop, closeWin, nextProj,
+      jumpProjects: go('projects'), goProjects: go('projects'), goContact: go('contact'), goResume: go('resume'),
+      exitOS: () => { this.beep(300); this.setState({ screen: 'start', win: null, proj: null, popup: null }); }
+    };
+  }
+}
+</script>
+</body>
+</html>
